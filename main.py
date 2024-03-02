@@ -20,7 +20,7 @@ def api(word):
             result_dictionary = {"word": word, "definition": definition}
             return result_dictionary
         else:
-            return "Word not found, please try any other word."
+            return "Word not found, please check for spelling errors or try another word."
 
     except Exception as e:
         return str(e)
