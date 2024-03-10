@@ -6,9 +6,9 @@ app = Flask(__name__)
 df = pd.read_csv("dictionary.csv")
 
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.route("/api/v1/<word>")
