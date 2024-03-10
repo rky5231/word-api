@@ -5,11 +5,12 @@ app = Flask(__name__, template_folder='.')
 
 df = pd.read_csv("dictionary.csv")
 
+# Define base URL for GitHub Pages link
+BASE_URL = "https://rky5231.github.io/word-api"
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
+    return render_template('index.html', base_url=BASE_URL)
 
 @app.route("/api/v1/<word>")
 def api(word):
@@ -24,7 +25,6 @@ def api(word):
 
     except Exception as e:
         return str(e)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
