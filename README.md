@@ -1,45 +1,53 @@
+# Word API
 
-Dictionary API
-This is a simple Flask web application that provides an API to fetch word definitions from a CSV file.
+The Word API project provides a RESTful API for accessing word-related information, including definitions, synonyms, antonyms, and examples. It serves as a convenient tool for developers to integrate word-related functionalities into their applications.
 
-Usage
-API Endpoint
-To use the API, send a GET request to the following endpoint:
+## Features
 
-ruby
-Copy code
-http://your-domain/api/v1/<word>
-Replace <word> with the word you want to get the definition for.
+- **Word Definitions**: Retrieve definitions of words.
+- **Synonyms and Antonyms**: Get synonyms and antonyms for words.
+- **Example Usage**: Access example sentences using words.
+- **RESTful API**: Expose endpoints to interact with the word-related functionalities programmatically.
+- **Simple Integration**: Easily integrate the Word API into your applications using HTTP requests.
 
-Example
-For example, to get the definition of the word "sun", you would send a GET request to:
+## Installation
 
-bash
-Copy code
-http://your-domain/api/v1/sun
-Response
-If the word is found in the dictionary, the API will return a JSON object containing the word and its definition. If the word is not found, it will return an error message.
+1. Clone the repository:
 
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/dictionary-api.git
-Install the required dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Run the Flask application:
-bash
-Copy code
-python app.py
-The application will start running on http://127.0.0.1:5000/ by default.
+    ```bash
+    git clone https://github.com/rky5231/word-api.git
+    ```
 
-Data Source
-The word definitions are fetched from a CSV file named dictionary.csv. Make sure to update this file with your own data or customize the application logic as needed.
+2. Navigate into the project directory:
 
-Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+    ```bash
+    cd word-api
+    ```
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+3. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run the Flask application:
+
+    ```bash
+    python app.py
+    ```
+
+5. Access the API endpoints using a tool like cURL, Postman, or by making HTTP requests from your application.
+
+## Usage
+
+1. Send HTTP GET requests to the API endpoints to retrieve word-related information.
+2. Use the provided endpoints `/definitions`, `/synonyms`, `/antonyms`, and `/examples` to access different types of word-related data.
+3. Customize and extend the API as needed to suit your application's requirements.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or pull requests to suggest improvements, report bugs, or add new features.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rky5231/word-api/blob/main/LICENSE) file for details.
